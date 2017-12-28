@@ -1,22 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-class Franc:
-    def __init__(self, amount):
-        self.amount = amount
+from .money import Money
 
-    def __eq__(self, other):
-        return self.amount == other.amount
-    
+
+class Franc(Money):    
     def times(self, multiplier):
         return Franc(self.amount * multiplier)
-
-
-
-
-
-
-
-
-
 
