@@ -5,5 +5,14 @@ from abc import ABCMeta, abstractclassmethod
 class Expression(metaclass=ABCMeta):
 
     @abstractclassmethod
-    def reduce(self, to):
+    def reduce(self, bank, to):
         pass
+
+
+
+
+
+
+
+
+

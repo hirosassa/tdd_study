@@ -29,8 +29,9 @@ class Money(Expression):
         from .sum import Sum
         return Sum(self, addend)
 
-    def reduce(self, to):
-        return self
+    def reduce(self, bank, to):
+        rate = bank.rate(self.currency(), to)
+        return Money(self.amount() / rate, to)
 
     @staticmethod
     def dollar(amount):
