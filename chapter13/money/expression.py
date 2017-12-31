@@ -3,4 +3,7 @@
 from abc import ABCMeta, abstractclassmethod
 
 class Expression(metaclass=ABCMeta):
-    pass
+
+    @abstractclassmethod
+    def reduce(self, to):
+        pass
