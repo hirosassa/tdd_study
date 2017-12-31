@@ -18,9 +18,13 @@ class WasRun(TestCase):
     def testMethod(self):
         self.wasRun = True
 
-if __name__ == "__main__":
-    test = WasRun("testMethod")
-    print(test.wasRun)
-    test.run()
-    print(test.wasRun)
 
+class TestCaseTest(TestCase):
+    def testRunning(self):
+        test = WasRun("testMethod")
+        assert(not test.wasRun)
+        test.run()
+        assert(test.wasRun)
+    
+if __name__ == "__main__":
+    TestCaseTest("testRunning").run()
