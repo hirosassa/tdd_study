@@ -10,6 +10,11 @@ class TriangleTest(unittest.TestCase):
         with self.assertRaises(Exception):
             triangle.triangleness(sides)
 
+    def test_linear(self):
+        sides = [1, 2, 3]
+        with self.assertRaises(Exception):
+            triangle.triangleness(sides)
+        
     def test_regular_triangle(self):
         sides = [2, 2, 2]
         self.assertEqual(1, triangle.triangleness(sides))
